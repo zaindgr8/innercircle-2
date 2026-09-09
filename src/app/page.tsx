@@ -241,11 +241,24 @@ export default function Home() {
       <main id="top">
         {/* ---------------------------------------------------- Hero */}
         <section className="wrap hero">
-          <span className="seal">
-            <Image src="/logo.jpg" alt="The Inner Circle DXB" width={148} height={148} priority />
-          </span>
+          {/* The brand mark, set as type rather than a cropped photo — crisp at
+              any size and the true focal point of the hero. Decorative: the
+              header's brand link already gives screen readers the name. */}
+          <div className="wordmark" aria-hidden="true">
+            <div className="wordmark__flank">
+              <span className="wordmark__rule" />
+              <span className="wordmark__the">The</span>
+              <span className="wordmark__rule" />
+            </div>
+            <div className="wordmark__main gold-grad">Inner Circle</div>
+            <div className="wordmark__flank">
+              <span className="wordmark__rule" />
+              <span className="wordmark__tag">Dubai</span>
+              <span className="wordmark__rule" />
+            </div>
+          </div>
 
-          <h1 className="h-display">
+          <h1 className="hero__tagline">
             Dubai’s founders and investors,{' '}
             <em className="italic gold-grad">at one table</em>
           </h1>
