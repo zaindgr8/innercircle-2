@@ -5,7 +5,7 @@ import path from 'path';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'contact@devmatesolutions.com';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'The Inner Circle DXB <onboarding@resend.dev>';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'The Inner Circle <membership@aifounderhub.com>';
 
 export async function POST(request: Request) {
   try {
